@@ -1,0 +1,102 @@
+:root {
+    --color-font: white;
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-image: url(https://images.unsplash.com/photo-1456613820599-bfe244172af5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80);
+    background-size: cover;
+    background-position: center;
+    grid-template-rows: 50px 1fr 150px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "nav nav search search"
+                         "content content player player"
+                         "rating footer footer .";
+                         
+}
+
+.navigation {
+    display: flex;
+    grid-area: nav;
+    color: var(--color-font);
+    font-size: 35px;   
+}
+
+
+.search {
+    display: flex;
+    grid-area: search;
+    color: var(--color-font);
+    font-size: 35px;
+    justify-content: flex-end;
+}
+
+.content {
+    display: flex;
+    grid-area: content;
+    color: var(--color-font);
+    align-items: center;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.playerbox {
+    display: flex;
+    grid-area: player;
+    color: var(--color-font);
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating {
+    display: flex;
+    grid-area: rating;
+    color: var(--color-font);
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    grid-area: footer;
+    color: var(--color-font);
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-weight: 800;          
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    
+}
+
+.szuk {
+    list-style-type: none;
+    display: flex;
+}
+
+.item {
+    margin: 15px;
+}
+
+.szuk :first-child {
+    font-weight: 800;
+}
+
